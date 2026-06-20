@@ -1,0 +1,12 @@
+@import './theme.css';
+body { overflow-x: hidden; }
+
+/* ── Responsive nav ─────────────────────────────────────────────── */
+@media (max-width: 680px) {
+  .nav-links       { display: none !important; }
+  .hamburger       { display: flex !important; }
+  .mobile-controls { gap: 12px; }
+}
+@media (min-width: 681px) {
+  .hamburger { display: none !important; }
+}

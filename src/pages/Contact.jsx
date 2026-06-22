@@ -1,4 +1,5 @@
 import useReveal from '../components/useReveal'
+import { useSEO } from '../components/useSEO'
 
 function Reveal({ children, delay=0 }) {
   const ref = useReveal()
@@ -20,6 +21,11 @@ const LINKS = [
 ]
 
 export default function Contact() {
+  useSEO(
+    'Contact',
+    'Get in touch with Carlos Tafara Mpupuni — email, GitHub, LinkedIn, Google Scholar, and ResearchGate.',
+    '/contact'
+  )
   return (
     <div>
       {/* Hero */}

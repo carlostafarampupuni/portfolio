@@ -1,4 +1,5 @@
 import useReveal from '../components/useReveal'
+import { useSEO } from '../components/useSEO'
 
 function Reveal({ children, delay=0 }) {
   const ref = useReveal()
@@ -39,6 +40,11 @@ const PATENTS = [
 ]
 
 export default function Research() {
+  useSEO(
+    'Research',
+    'Peer-reviewed papers and patents on lithium-metal anode protection, P₂O₅/LiNO₃ composite layers, and silicon-graphite composite anodes by Carlos Tafara Mpupuni.',
+    '/research'
+  )
   return (
     <div>
       {/* Hero */}

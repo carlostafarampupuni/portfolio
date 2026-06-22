@@ -2,6 +2,7 @@
 
 import { Link } from 'react-router-dom'
 import useReveal from '../components/useReveal'
+import { useSEO } from '../components/useSEO'
 
 function Reveal({ children, delay=0 }) {
   const ref = useReveal()
@@ -72,6 +73,11 @@ const TIMELINE = [
 ]
 
 export default function About() {
+  useSEO(
+    'About',
+    'PhD researcher in lithium-ion battery electrochemistry at Chungnam National University, building interactive learning tools for chemistry and mathematics.',
+    '/about'
+  )
   return (
       <div>
 

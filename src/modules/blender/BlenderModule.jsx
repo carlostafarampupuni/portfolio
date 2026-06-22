@@ -2,8 +2,14 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FIGURES } from './figures'
 import Lightbox from './Lightbox'
+import { useSEO } from '../../components/useSEO'
 
 export default function BlenderModule() {
+  useSEO(
+    'Schematics',
+    'Photorealistic 3D renders of electrochemical cell architectures — coin cell, pouch, and cylindrical formats — for publication and teaching.',
+    '/projects/blender'
+  )
   const categories = useMemo(
     () => ['All', ...new Set(FIGURES.map(f => f.category))],
     []

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import useReveal from '../components/useReveal'
+import { useSEO } from '../components/useSEO'
 
 function Reveal({ children, delay=0 }) {
   const ref = useReveal()
@@ -15,11 +16,11 @@ const MODULES = [
     title:'Integration by Parts',
     desc:'Start from the product rule. Drag a point on the curve and watch two areas always sum to the same rectangle — the formula becomes obvious.',
     accent:'#30d158' },
-  { to:'/projects', live:true, label:'Chemistry',
+  { to:'/projects/equilibrium', live:true, label:'Chemistry',
     title:'Chemical Equilibria',
     desc:'Le Chatelier\'s principle, ICE tables, Kp vs Kc. Drag the concentration to simulate the NH₃ production',
     accent:'#ff9f0a' },
-  { to:'/projects', live:true, label:'Mathematics',
+  { to:'/projects/complex', live:true, label:'Mathematics',
     title:'Complex Numbers',
     desc:'Argand plane, polar form, De Moivre\'s theorem.',
     accent:'#bf5af2' },
@@ -32,6 +33,11 @@ const FOOTER_LINKS = [
 ]
 
 export default function Home() {
+  useSEO(
+    null,
+    'Interactive learning modules in chemistry and mathematics, built by battery researcher and educator Carlos Tafara Mpupuni.',
+    '/'
+  )
   return (
     <div>
 

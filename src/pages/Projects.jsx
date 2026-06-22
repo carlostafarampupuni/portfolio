@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import useReveal from '../components/useReveal'
+import { useSEO } from '../components/useSEO'
 
 function Reveal({ children, delay=0 }) {
   const ref = useReveal()
@@ -34,6 +35,11 @@ const SECTIONS = [
 ]
 
 export default function Projects() {
+  useSEO(
+    'Projects',
+    'Interactive learning modules: an electrochemistry Daniell cell, chemical equilibrium simulator, integration by parts, complex numbers, and 3D battery-cell schematics.',
+    '/projects'
+  )
   return (
     <div>
       {/* Hero */}
